@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ViewCartController" prefWidth="600" prefHeight="400">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        
+        <Label text="🛒 View Cart" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <TableView fx:id="cartTable" editable="true" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title" prefWidth="200" />
+                <TableColumn fx:id="priceColumn" text="Price" prefWidth="100" />
+                <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100" />
+                <TableColumn fx:id="subtotalColumn" text="Subtotal" prefWidth="100" />
+            </columns>
+        </TableView>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="➕ Add Product" onAction="#handleOpenSearch"/>
+            <Button text="Close" onAction="#handleClose"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

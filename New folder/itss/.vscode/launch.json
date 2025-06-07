@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "demo/app.App",
+      "projectName": "demo"
+    },
+    {
+      "type": "java",
+      "name": "Launch JavaFX App",
+      "request": "launch",
+      "mainClass": "app.App",
+      "projectName": "demo",
+      "vmArgs": "--module-path \"D:/Download/jdk-22_windows-x64_bin/jdk-22.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}
