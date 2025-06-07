@@ -2,21 +2,21 @@ package entity.media;
 
 import entity.media.Product;
 
-public class CD extends Product {
+public class LPRecord extends Product {
     private String artist;
     private String recordLabel;
-    private String tracklist;
+    private String genre;
 
     // Constructor
-    public CD(int productId, String productName, String category, double price, int stock,
-              String artist, String recordLabel, String tracklist) {
+    public LPRecord(int productId, String productName, String category, double price, int stock,
+                    String artist, String recordLabel, String genre) {
         super(productId, productName, category, price, stock); // Call superclass constructor
         this.artist = artist;
         this.recordLabel = recordLabel;
-        this.tracklist = tracklist;
+        this.genre = genre;
     }
 
-    // Getter and Setter for CD-specific attributes
+    // Getter and Setter for LPRecord-specific attributes
     public String getArtist() {
         return artist;
     }
@@ -33,16 +33,16 @@ public class CD extends Product {
         this.recordLabel = recordLabel;
     }
 
-    public String getTracklist() {
-        return tracklist;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setTracklist(String tracklist) {
-        this.tracklist = tracklist;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", Artist: " + artist + ", Record Label: " + recordLabel + ", Tracklist: " + tracklist;
+        return super.toString() + ", Artist: " + artist + ", Record Label: " + recordLabel + ", Genre: " + genre;
     }
 }
