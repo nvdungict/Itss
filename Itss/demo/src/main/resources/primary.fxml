@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="boundary.OrderScreenController">
+
+    <top>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <Label text="AIMS - Place Order" style="-fx-font-size: 20;" />
+
+            <TextField fx:id="nameField" promptText="Customer Name"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <TextField fx:id="phoneField" promptText="Phone Number"/>
+            <TextField fx:id="addressField" promptText="Address"/>
+            <TextField fx:id="provinceField" promptText="Province/City"/>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="cartTable" editable="true">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Product Name" />
+                <TableColumn fx:id="priceColumn" text="Price" />
+                <TableColumn fx:id="quantityColumn" text="Quantity" />
+                <TableColumn fx:id="subtotalColumn" text="Subtotal" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Pay Now" onAction="#handlePayOrder"/>
+                <Button text="Remove Selected" onAction="#handleRemoveItem"/>
+            </HBox>
+
+            <TextArea fx:id="invoiceOutput" editable="false" wrapText="true" prefHeight="100"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
